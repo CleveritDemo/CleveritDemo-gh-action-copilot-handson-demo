@@ -30,7 +30,10 @@ Además, habrás aprendido cómo aprovechar GitHub Copilot para acelerar la conf
 
 Crea un nuevo repositorio con el nombre: gh-action-copilot-handson
 
+Asegurarse de tener permisos de lectura y escritura en la configuración del flujo de trabajo
+
 Configuración
+
 Configuración -> Acciones -> General -> Permisos del Flujo de Trabajo -> Leer y Escribir
 
 ### Paso 3: Añadir un Nuevo Remoto al Repositorio Clonado
@@ -260,6 +263,9 @@ Pregunta a copilot cómo desplegar en GitHub Pages
     github_token: ${{ secrets.GITHUB_TOKEN }}
     publish_dir: ${{ inputs.publish_dir }}
 ```
+Una vez hecho push a la rama main y se haya terminado de ejecutar el flujo de trabajo, debes ir a la pestaña de configuracion -> pages y seleccionar Deploy from a branch,seleccionar la rama `gh-pages`, la carpeta `/root` y dar click en save. Luego de unos minutos, tu aplicación debería estar disponible junto con la URL de la página.
+
+![alt text](./assets/image-1.png)
 
 ## Crear un flujo de trabajo reutilizable.
 

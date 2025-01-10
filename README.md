@@ -30,7 +30,11 @@ Additionally, you will have learned how to leverage GitHub Copilot to accelerate
 
 Create a new repository with the name: gh-action-copilot-handson
 
+Make sure to have read and write permissions in the workflow settings
+
 Configuration
+
+
 Settings -> Actions -> General -> Workflow Permissions -> Read and Write
 
 ### Step 3: Add New Remote to Cloned Repository
@@ -260,6 +264,10 @@ Ask to copilot how to deploy to github page
     github_token: ${{ secrets.GITHUB_TOKEN }}
     publish_dir: ${{ inputs.publish_dir }}
 ```
+Once you have pushed to the main branch and the workflow has finished executing, go to the settings tab -> pages and select Deploy from a branch. Choose the `gh-pages` branch, the `/root` folder, and click save. After a few minutes, your application should be available along with the page URL.
+
+![alt text](./assets/image-1.png)
+
 
 ## Create a reusable workflow.
 
