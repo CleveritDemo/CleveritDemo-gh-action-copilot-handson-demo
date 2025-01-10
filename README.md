@@ -28,7 +28,7 @@ Additionally, you will have learned how to leverage GitHub Copilot to accelerate
 
 ### Step 2: Create a New Repository
 
-Create a new repository with the name: gh-action-copilot-handson
+Create a new repository with the name: gh-action-copilot-handson-demo
 
 Make sure to have read and write permissions in the workflow settings
 

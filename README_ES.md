@@ -28,7 +28,7 @@ Además, habrás aprendido cómo aprovechar GitHub Copilot para acelerar la conf
 
 ### Paso 2: Crear un Nuevo Repositorio
 
-Crea un nuevo repositorio con el nombre: gh-action-copilot-handson
+Crea un nuevo repositorio con el nombre: gh-action-copilot-handson-demo
 
 Asegurarse de tener permisos de lectura y escritura en la configuración del flujo de trabajo
 
