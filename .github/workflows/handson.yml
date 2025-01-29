@@ -1,0 +1,43 @@
+name: handson
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript,typescript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:javascript"
+
+      - name: Scan for leaked credentials
+        uses: trufflesecurity/trufflehog@main
+        with:
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --only-verified
+
+      - name: Run tests
+        run: npm run test
+# add another step to run the build with npm run
+      - name: Build
+        run: npm run build
